@@ -68,6 +68,6 @@ app.get("/", (req, res) => {
   res.send("Hello, world!");
 });
 
-app.get("/charts", handleBillboardCharts);
+app.get("/api/charts", handleBillboardCharts);
 
 module.exports = app;
