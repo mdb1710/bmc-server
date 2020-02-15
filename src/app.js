@@ -20,10 +20,10 @@ app.use(helmet());
 let newCharts;
 
 function handleBillboardCharts(req, res) {
-  const { date } = req.query;
+  // const { date } = req.body;
 
   let chartType = "hot-100";
-  let chartDate = date;
+  let chartDate = "1993-07-10";
 
   getChart(chartType, chartDate, (err, chart) => {
     if (err) {
