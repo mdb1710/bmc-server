@@ -33,8 +33,7 @@ function handleBillboardCharts(req, res) {
         return {
           id: entry.rank,
           title: entry.title,
-          artist: entry.artist,
-          cover: entry.cover
+          artist: entry.artist
         };
       });
       console.log("The top song is SWV watch", newCharts[0]);
