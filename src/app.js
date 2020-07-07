@@ -33,6 +33,7 @@ function handleBillboardCharts(req, res) {
       newCharts = chart.songs.map(entry => {
         return {
           id: entry.rank,
+          cover: entry.cover,
           title: entry.title,
           artist: entry.artist
         };
