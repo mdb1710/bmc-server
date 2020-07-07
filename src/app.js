@@ -22,8 +22,9 @@ let newCharts;
 function handleBillboardCharts(req, res) {
   let chartType = "hot-100";
   let chartDate = req.query.date;
-
+  
   console.log("date is", req.query.date);
+  
 
   getChart(chartType, chartDate, (err, chart) => {
     if (err) {
