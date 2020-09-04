@@ -1,6 +1,7 @@
 "use strict";
 
 require("dotenv").config();
+const firebase = require('firebase/app');
 const express = require("express");
 const morgan = require("morgan");
 const cors = require("cors");
@@ -12,6 +13,12 @@ const { getChart } = require("billboard-top-100/billboard-top-100");
 const app = express();
 
 const morganOption = NODE_ENV === "production" ? "tiny" : "common";
+
+var admin = require('firebase-admin');
+
+var serviceAccount = require('path/to/serviceAccountKey.json');
+
+const defaultApp = admin.initializeApp();
 
 app.use(morgan(morganOption));
 app.use(cors());
